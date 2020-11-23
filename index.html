@@ -76,7 +76,7 @@
 
             async function getBitcoin() {
                 let result = [];
-                await $.get( "http://api.bullrunent.fr/BitcoinPrice", function( data ) {
+                await $.get( "https://api.bullrunent.fr/BitcoinPrice", function( data ) {
                     data.forEach(element => {
                         result.push( { x : new Date(element.Date), y: element.Price } )
                     });
@@ -86,7 +86,7 @@
 
             async function getConnected() {
                 let result = [];
-                await $.get( "http://api.bullrunent.fr/ConnectedUsers", function( data ) {
+                await $.get( "https://api.bullrunent.fr/ConnectedUsers", function( data ) {
                     data.forEach(element => {
                         result.push( { x : new Date(element.Date), y: element.ConnectedUsers } )
                     });
